@@ -1,0 +1,12 @@
+/home/rsb63/.conda/envs/gnsde/lib/python3.10/site-packages/torch_geometric/data/in_memory_dataset.py:300: UserWarning: It is not recommended to directly access the internal storage format `data` of an 'InMemoryDataset'. If you are absolutely certain what you are doing, access the internal storage via `InMemoryDataset._data` instead to suppress this warning. Alternatively, you can access stacked individual attributes of every graph via `dataset.{attr_name}`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/home/rsb63/rds/gnsde/grand-sde/src/run_standard_gnsde.py", line 622, in <module>
+    all_accuracies = main(opt)
+  File "/home/rsb63/rds/gnsde/grand-sde/src/run_standard_gnsde.py", line 351, in main
+    model = GNSDE(opt, dataset, device).to(device) if opt["no_early"] else GNSDEEarly(opt, dataset, device).to(device)
+  File "/home/rsb63/rds/gnsde/grand-sde/src/GNSDE_early.py", line 21, in __init__
+    super(GNSDEEarly, self).__init__(opt, dataset, device)
+  File "/home/rsb63/rds/gnsde/grand-sde/src/base_classes.py", line 351, in __init__
+    logvar = math.log(sigma ** 2 / (2. * theta))
+ValueError: math domain error

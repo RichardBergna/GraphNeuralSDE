@@ -1,0 +1,48 @@
+#!/bin/bash
+#!
+#! Example SLURM job script for Wilkes3 (AMD EPYC 7763, ConnectX-6, A100)
+#! Last updated: Fri 30 Jul 11:07:58 BST 2021
+#!
+#!#############################################################
+#!#### Modify the options in this section as appropriate ######
+#!#############################################################
+#! sbatch directives begin here ###############################
+#! Name of the job:
+#SBATCH -J CF_Computers
+#! Which project should be charged (NB Wilkes2 projects end in '-GPU'):
+#SBATCH -A MLMI-RSB63-SL2-GPU
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
+#! How many (MPI) tasks will there be in total?
+#! Note probably this should not exceed the total number of GPUs in use.
+#SBATCH --ntasks=1
+#! Submit a job array with index values between 0 and 31
+#! NOTE: This must be a raaange, not a single number (i.e. specifying '32' here would only run one job, with index 32)
+#SBATCH --array=0
+#! Specify the number of GPUs per node (between 1 and 4; must be 4 if nodes>1).
+#! Note that the job submission script will enforce no more than 32 cpus per GPU.
+#SBATCH --gres=gpu:1
+#! How much wallclock time will be required?
+#SBATCH --time=02:00:00
+#! What types of email messages do you wish to receive?
+#SBATCH --mail-type=ALL
+#! Uncomment this to prevent the job from being requeued (e.g. if
+#! interrupted by node failure or system downtime):
+##SBATCH --no-requeue
+#! Output filename:
+#! %A means slurm job ID and %a means array index
+#SBATCH --output=name_%A_%a.out
+#! Errors filename:
+#SBATCH --error=name_%A_%a.err
+#! Do not change:
+#SBATCH -p ampere
+
+
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel8/default-amp              # REQUIRED - loads the basic environment
+
+source /home/${USER}/.bashrc
+source /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/activate gnsde
+
+python3 train.py --model GCN --dataset Amazon-Computers --device cuda --alpha 0.5 --optimal --num_runs 1 --epochs 20000 --task_index $SLURM_ARRAY_TASK_ID

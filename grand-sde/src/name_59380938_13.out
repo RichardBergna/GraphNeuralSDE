@@ -1,0 +1,689 @@
+[KeOps] Warning : cuda was detected, but driver API could not be initialized. Switching to cpu only.
+Folder already exists: results/cora
+experiment: 0
+Dataset size (num_nodes): 2485, Intended development set size (num_development): 1500
+Dataset size (num_nodes): 2485, Actual development set size (num_development): 1500
+rations: train 140, val 1360, test 985
+Before OOD adjustment: Total instances of last class: 131
+Before OOD adjustment: Training instances of last class: 20
+Before OOD adjustment: Testing instances of last class: 55
+Before OOD adjustment: Val instances of last class: 56
+total train + val+ test 131
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 55
+Total number of classes: 7
+number of classes to train: 6
+using file gn_sde.py
+sigma 1.0
+rtol 0.01
+t1 0.01
+Dataset size (num_nodes): 2485, Intended development set size (num_development): 1500
+Dataset size (num_nodes): 2485, Actual development set size (num_development): 1500
+rations: train 140, val 1360, test 985
+within set_train_val_test_split function!
+Before OOD adjustment: Total instances of last class: 131
+Before OOD adjustment: Training instances of last class: 20
+Before OOD adjustment: Testing instances of last class: 46
+Before OOD adjustment: Val instances of last class: 65
+total train + val+ test 131
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+LatentGraphSDE(
+  (net): Sequential(
+    (0): MyGCN(
+      (activation): Softplus(beta=1, threshold=20)
+      (conv1): GCNConv(81, 80)
+    )
+    (1): MyGCN(
+      (conv1): GCNConv(80, 80)
+    )
+  )
+  (in_net): MyGCN(
+    (conv1): GCNConv(1433, 80)
+  )
+  (projection_net): Sequential(
+    (0): Flatten(start_dim=1, end_dim=-1)
+    (1): MyGCN(
+      (conv1): GCNConv(80, 6)
+    )
+  )
+)
+qy0_mean
+torch.Size([1, 80])
+qy0_logvar
+torch.Size([1, 80])
+net.0.conv1.bias
+torch.Size([80])
+net.0.conv1.lin.weight
+torch.Size([80, 81])
+net.1.conv1.bias
+torch.Size([80])
+net.1.conv1.lin.weight
+torch.Size([80, 80])
+in_net.conv1.bias
+torch.Size([80])
+in_net.conv1.lin.weight
+torch.Size([80, 1433])
+projection_net.1.conv1.bias
+torch.Size([6])
+projection_net.1.conv1.lin.weight
+torch.Size([6, 80])
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 001, Runtime 3.686163, Loss 1.809907, forward nfe 0, backward nfe 0, Train: 0.3250, Val: 0.1750, Test: 0.2020, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 002, Runtime 3.485798, Loss 1.769465, forward nfe 0, backward nfe 0, Train: 0.3583, Val: 0.2368, Test: 0.2426, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 003, Runtime 3.460638, Loss 1.739585, forward nfe 0, backward nfe 0, Train: 0.5500, Val: 0.3368, Test: 0.3178, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 004, Runtime 3.459765, Loss 1.707336, forward nfe 0, backward nfe 0, Train: 0.6417, Val: 0.3831, Test: 0.3635, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 005, Runtime 3.461080, Loss 1.682642, forward nfe 0, backward nfe 0, Train: 0.7583, Val: 0.4294, Test: 0.4132, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 006, Runtime 3.481287, Loss 1.653902, forward nfe 0, backward nfe 0, Train: 0.8250, Val: 0.4890, Test: 0.4711, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 007, Runtime 3.460239, Loss 1.625748, forward nfe 0, backward nfe 0, Train: 0.8500, Val: 0.5221, Test: 0.4985, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 008, Runtime 3.463024, Loss 1.590828, forward nfe 0, backward nfe 0, Train: 0.8500, Val: 0.5500, Test: 0.5421, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 009, Runtime 3.458614, Loss 1.547596, forward nfe 0, backward nfe 0, Train: 0.8833, Val: 0.5868, Test: 0.5655, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 010, Runtime 3.470208, Loss 1.519357, forward nfe 0, backward nfe 0, Train: 0.9250, Val: 0.5912, Test: 0.5878, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 011, Runtime 3.455753, Loss 1.504068, forward nfe 0, backward nfe 0, Train: 0.9083, Val: 0.5993, Test: 0.5990, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 012, Runtime 3.467587, Loss 1.454922, forward nfe 0, backward nfe 0, Train: 0.8917, Val: 0.6110, Test: 0.6061, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 013, Runtime 3.470109, Loss 1.431750, forward nfe 0, backward nfe 0, Train: 0.9083, Val: 0.6426, Test: 0.6467, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 014, Runtime 3.459863, Loss 1.391123, forward nfe 0, backward nfe 0, Train: 0.9333, Val: 0.6493, Test: 0.6386, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 015, Runtime 3.333334, Loss 1.355828, forward nfe 0, backward nfe 0, Train: 0.9333, Val: 0.6493, Test: 0.6386, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 016, Runtime 3.470845, Loss 1.293042, forward nfe 0, backward nfe 0, Train: 0.9333, Val: 0.6750, Test: 0.6873, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 017, Runtime 3.321031, Loss 1.262572, forward nfe 0, backward nfe 0, Train: 0.9333, Val: 0.6750, Test: 0.6873, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 018, Runtime 3.452642, Loss 1.232282, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.6890, Test: 0.6751, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 019, Runtime 3.359956, Loss 1.185226, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.6890, Test: 0.6751, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 020, Runtime 3.463517, Loss 1.173441, forward nfe 0, backward nfe 0, Train: 0.9500, Val: 0.7044, Test: 0.6954, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 021, Runtime 3.466159, Loss 1.119767, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7074, Test: 0.7086, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 022, Runtime 3.328787, Loss 1.079937, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7074, Test: 0.7086, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 023, Runtime 3.473123, Loss 1.046821, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.7279, Test: 0.7259, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 024, Runtime 3.350601, Loss 1.028108, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.7279, Test: 0.7259, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 025, Runtime 3.351296, Loss 0.986693, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.7279, Test: 0.7259, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 026, Runtime 3.488743, Loss 0.949401, forward nfe 0, backward nfe 0, Train: 0.9417, Val: 0.7353, Test: 0.7279, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 027, Runtime 3.477046, Loss 0.903094, forward nfe 0, backward nfe 0, Train: 0.9500, Val: 0.7368, Test: 0.7360, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 028, Runtime 3.473086, Loss 0.879043, forward nfe 0, backward nfe 0, Train: 0.9583, Val: 0.7434, Test: 0.7289, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 029, Runtime 3.442083, Loss 0.835433, forward nfe 0, backward nfe 0, Train: 0.9583, Val: 0.7478, Test: 0.7310, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 030, Runtime 3.327509, Loss 0.817413, forward nfe 0, backward nfe 0, Train: 0.9583, Val: 0.7478, Test: 0.7310, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 031, Runtime 3.464690, Loss 0.796757, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7515, Test: 0.7431, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 032, Runtime 3.322417, Loss 0.763174, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7515, Test: 0.7431, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 033, Runtime 3.468395, Loss 0.716285, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7551, Test: 0.7462, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 034, Runtime 3.476121, Loss 0.694956, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7574, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 035, Runtime 3.338937, Loss 0.659204, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7574, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 036, Runtime 3.470012, Loss 0.640510, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7610, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 037, Runtime 3.363517, Loss 0.625752, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7610, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 038, Runtime 3.471740, Loss 0.597604, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7618, Test: 0.7513, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 039, Runtime 3.456154, Loss 0.579724, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7632, Test: 0.7523, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 040, Runtime 3.339125, Loss 0.553325, forward nfe 0, backward nfe 0, Train: 0.9667, Val: 0.7632, Test: 0.7523, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 041, Runtime 3.473794, Loss 0.520584, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7647, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 042, Runtime 3.332739, Loss 0.502461, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7647, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 043, Runtime 3.485456, Loss 0.472227, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 044, Runtime 3.335799, Loss 0.472330, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 045, Runtime 3.346341, Loss 0.445502, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 046, Runtime 3.356759, Loss 0.438296, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 047, Runtime 3.410790, Loss 0.412710, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 048, Runtime 3.382029, Loss 0.394291, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7676, Test: 0.7563, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 049, Runtime 3.455461, Loss 0.370834, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7691, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 050, Runtime 3.461545, Loss 0.377798, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7713, Test: 0.7645, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 051, Runtime 3.335905, Loss 0.347736, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7713, Test: 0.7645, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 052, Runtime 3.350158, Loss 0.349550, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7713, Test: 0.7645, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 053, Runtime 3.476166, Loss 0.318215, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 054, Runtime 3.351448, Loss 0.327187, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 055, Runtime 3.359325, Loss 0.313750, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 056, Runtime 3.350852, Loss 0.297453, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 057, Runtime 3.371654, Loss 0.283057, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 058, Runtime 3.374258, Loss 0.271801, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 059, Runtime 3.316456, Loss 0.279253, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 060, Runtime 3.356266, Loss 0.254391, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 061, Runtime 3.364634, Loss 0.238081, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7721, Test: 0.7604, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 062, Runtime 3.485017, Loss 0.246249, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7728, Test: 0.7655, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 063, Runtime 3.464381, Loss 0.228596, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7750, Test: 0.7645, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 064, Runtime 3.336020, Loss 0.234395, forward nfe 0, backward nfe 0, Train: 0.9750, Val: 0.7750, Test: 0.7645, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 065, Runtime 3.478983, Loss 0.213903, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7757, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 066, Runtime 3.343331, Loss 0.222883, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7757, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 067, Runtime 3.333484, Loss 0.205679, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7757, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 068, Runtime 3.357323, Loss 0.201455, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7757, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 069, Runtime 3.364267, Loss 0.194798, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7757, Test: 0.7614, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 070, Runtime 3.505980, Loss 0.191238, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 071, Runtime 3.339309, Loss 0.177669, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 072, Runtime 3.339544, Loss 0.174785, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 073, Runtime 3.372013, Loss 0.170220, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 074, Runtime 3.361132, Loss 0.167257, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 075, Runtime 3.374588, Loss 0.151301, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 076, Runtime 3.323910, Loss 0.162610, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 077, Runtime 3.352884, Loss 0.159154, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 078, Runtime 3.348923, Loss 0.150424, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 079, Runtime 3.353361, Loss 0.137881, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 080, Runtime 3.387975, Loss 0.139688, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 081, Runtime 3.373341, Loss 0.143408, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 082, Runtime 3.335262, Loss 0.128613, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 083, Runtime 3.366664, Loss 0.138422, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 084, Runtime 3.355915, Loss 0.125457, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 085, Runtime 3.366543, Loss 0.120009, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 086, Runtime 3.379528, Loss 0.129080, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 087, Runtime 3.362155, Loss 0.122047, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 088, Runtime 3.358970, Loss 0.130746, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 089, Runtime 3.359776, Loss 0.111424, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 090, Runtime 3.383253, Loss 0.114648, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 091, Runtime 3.384816, Loss 0.113914, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 092, Runtime 3.380412, Loss 0.108214, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 093, Runtime 3.385536, Loss 0.114938, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 094, Runtime 3.357620, Loss 0.105993, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 095, Runtime 3.378908, Loss 0.107944, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 096, Runtime 3.376165, Loss 0.094698, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 097, Runtime 3.393780, Loss 0.098284, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 098, Runtime 3.379978, Loss 0.098074, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 099, Runtime 3.421966, Loss 0.096907, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 100, Runtime 3.367255, Loss 0.094895, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 101, Runtime 3.375562, Loss 0.093276, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 102, Runtime 3.378906, Loss 0.094896, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 103, Runtime 3.398086, Loss 0.094148, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 104, Runtime 3.386367, Loss 0.091146, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 105, Runtime 3.421222, Loss 0.083923, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 106, Runtime 3.390448, Loss 0.082739, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 107, Runtime 3.378838, Loss 0.087361, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 108, Runtime 3.378245, Loss 0.082364, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 109, Runtime 3.400958, Loss 0.080221, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 110, Runtime 3.417223, Loss 0.080059, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 111, Runtime 3.421486, Loss 0.080379, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 112, Runtime 3.389615, Loss 0.079869, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 113, Runtime 3.414194, Loss 0.078370, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 114, Runtime 3.397055, Loss 0.069037, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 115, Runtime 3.416505, Loss 0.069371, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 116, Runtime 3.416196, Loss 0.074582, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 117, Runtime 3.427733, Loss 0.068476, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 118, Runtime 3.374897, Loss 0.070799, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 119, Runtime 3.396800, Loss 0.067243, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 120, Runtime 3.428752, Loss 0.073634, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 121, Runtime 3.417955, Loss 0.070180, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 122, Runtime 3.435905, Loss 0.065801, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 123, Runtime 3.442196, Loss 0.066076, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 124, Runtime 3.412250, Loss 0.074373, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 125, Runtime 3.419588, Loss 0.066084, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 126, Runtime 3.424947, Loss 0.063863, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 127, Runtime 3.430957, Loss 0.068234, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 128, Runtime 3.440091, Loss 0.064814, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 129, Runtime 3.429767, Loss 0.066409, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 130, Runtime 3.413139, Loss 0.060353, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 131, Runtime 3.440300, Loss 0.060441, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 132, Runtime 3.428006, Loss 0.065330, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 133, Runtime 3.434418, Loss 0.062100, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 134, Runtime 3.466774, Loss 0.061085, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 135, Runtime 3.447915, Loss 0.060482, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 136, Runtime 3.417646, Loss 0.062018, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 137, Runtime 3.410038, Loss 0.059743, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 138, Runtime 3.430084, Loss 0.055402, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 139, Runtime 3.447286, Loss 0.056304, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 140, Runtime 3.485379, Loss 0.058867, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 141, Runtime 3.421970, Loss 0.052228, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 142, Runtime 3.420334, Loss 0.056138, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 143, Runtime 3.453370, Loss 0.059374, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 144, Runtime 3.442838, Loss 0.048929, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 145, Runtime 3.455512, Loss 0.055943, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 146, Runtime 3.448183, Loss 0.055448, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 147, Runtime 3.448668, Loss 0.051654, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 148, Runtime 3.431679, Loss 0.056693, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 149, Runtime 3.451926, Loss 0.053555, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 150, Runtime 3.461926, Loss 0.049227, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 151, Runtime 3.474917, Loss 0.052171, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 152, Runtime 3.484495, Loss 0.052270, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 153, Runtime 3.463496, Loss 0.050513, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 154, Runtime 3.446003, Loss 0.051902, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 155, Runtime 3.465477, Loss 0.053238, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 156, Runtime 3.438955, Loss 0.052724, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 157, Runtime 3.436660, Loss 0.045700, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 158, Runtime 3.453120, Loss 0.045269, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 159, Runtime 3.462921, Loss 0.050351, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 160, Runtime 3.449002, Loss 0.046485, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 161, Runtime 3.433952, Loss 0.053295, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 162, Runtime 3.428429, Loss 0.050217, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 163, Runtime 3.469339, Loss 0.043763, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 164, Runtime 3.459668, Loss 0.039800, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 165, Runtime 3.465542, Loss 0.050301, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 166, Runtime 3.443599, Loss 0.041018, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 167, Runtime 3.457308, Loss 0.042231, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 168, Runtime 3.437866, Loss 0.043025, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 169, Runtime 3.458353, Loss 0.042679, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 170, Runtime 3.456993, Loss 0.039445, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 171, Runtime 3.451858, Loss 0.042494, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 172, Runtime 3.438000, Loss 0.044831, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 173, Runtime 3.457065, Loss 0.042973, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 174, Runtime 3.444146, Loss 0.042641, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 175, Runtime 3.469762, Loss 0.040160, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 176, Runtime 3.450370, Loss 0.045340, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 177, Runtime 3.476925, Loss 0.041005, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 178, Runtime 3.430928, Loss 0.041414, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 179, Runtime 3.455164, Loss 0.038739, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 180, Runtime 3.472325, Loss 0.039223, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 181, Runtime 3.464520, Loss 0.040121, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 182, Runtime 3.469448, Loss 0.041290, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 183, Runtime 3.496271, Loss 0.040390, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 184, Runtime 3.440922, Loss 0.038867, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 185, Runtime 3.457980, Loss 0.035079, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 186, Runtime 3.470585, Loss 0.040649, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 187, Runtime 3.462229, Loss 0.039919, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 188, Runtime 3.450957, Loss 0.045413, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 189, Runtime 3.479566, Loss 0.038584, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 190, Runtime 3.438649, Loss 0.040550, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 191, Runtime 3.448826, Loss 0.039439, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 192, Runtime 3.445744, Loss 0.037853, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 193, Runtime 3.455389, Loss 0.033947, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 194, Runtime 3.481762, Loss 0.034991, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 195, Runtime 3.469798, Loss 0.036211, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 196, Runtime 3.442202, Loss 0.038019, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 197, Runtime 3.463453, Loss 0.033418, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 198, Runtime 3.465272, Loss 0.039181, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+After OOD adjustment: Training instances of last class: 0
+After OOD adjustment: Testing instances of last class: 46
+Epoch: 199, Runtime 3.478713, Loss 0.036119, forward nfe 0, backward nfe 0, Train: 0.9833, Val: 0.7831, Test: 0.7594, Best time: 18.2948
+best val accuracy 0.783088 with test accuracy 0.759391 at epoch 70 and best time 18.294754
+base_directory resutls_prob/OOD_Cora
+new_name:  lgnsde_ODD
+file_path 1 resutls_prob/OOD_Cora/lgnsde_ODD_prediction_probabilities_13.npz
+file_path 2 resutls_prob/OOD_Cora/lgnsde_ODD_prediction_probabilities_13.npz
+Entropy Threshold: inf Test accuracy: 0.7614213197969543
+Entropy Threshold: 2 Test accuracy: 0.7614213197969543
+Entropy Threshold: 1.6 Test accuracy: 0.8104886769964244
+Entropy Threshold: 1.5 Test accuracy: 0.8554054054054054
+Entropy Threshold: 1.4 Test accuracy: 0.886535552193646
+Entropy Threshold: 1.3 Test accuracy: 0.909556313993174
+Entropy Threshold: 1.2 Test accuracy: 0.923679060665362
+Entropy Threshold: 1.1 Test accuracy: 0.9463087248322147
+Entropy Threshold: 0.9 Test accuracy: 0.963276836158192
+Entropy Threshold: 0.8 Test accuracy: 0.9804560260586319
+Entropy Threshold: 0.7 Test accuracy: 0.9811320754716981
+Entropy Threshold: 0.6 Test accuracy: 0.9853658536585366
+Entropy Threshold: 0.5 Test accuracy: 0.9878787878787879
+Entropy Threshold: 0.4 Test accuracy: 0.984
+Entropy Threshold: 0.3 Test accuracy: 0.9880952380952381
+Entropy Threshold: 0.2 Test accuracy: 1.0
+Entropy Threshold: 0.1 Test accuracy: 1.0

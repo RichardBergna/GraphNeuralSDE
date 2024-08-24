@@ -1,0 +1,51 @@
+#!/bin/bash
+#!
+#! Example SLURM job script for Wilkes3 (AMD EPYC 7763, ConnectX-6, A100)
+#! Last updated: Fri 30 Jul 11:07:58 BST 2021
+#!
+#!#############################################################
+#!#### Modify the options in this section as appropriate ######
+#!#############################################################
+#! sbatch directives begin here ###############################
+#! Name of the job:
+#SBATCH -J ode_Pubmed_OOD
+#! Which project should be charged (NB Wilslkes2 projects end in '-GPU'):
+#SBATCH -A HERNANDEZ-LOBATO-SL3-CPU
+#! How many whole nodes should be allocated?
+#SBATCH --nodes=1
+#! How many (MPI) tasks will there be in total?
+#! Note probably this should not exceed the total number of GPUs in use.
+#SBATCH --ntasks=1
+#! Submit a job array with index values between 0 and 31
+#! NOTE: This must be a raaange, not a single number (i.e. specifying '32' here would only run one job, with index 32)
+#SBATCH --array=0-99
+#! Specify the number of GPUs per node (between 1 and 4; must be 4 if nodes>1).
+#! Note that the job submission script will enforce no more than 32 cpus per GPU.
+
+#! How much wallclock time will be required?
+#SBATCH --time=12:00:00
+#! What types of email messages do you wish to receive?
+#SBATCH --mail-type=ALL
+#! Uncomment this to prevent the job from being requeued (e.g. if
+#! interrupted by node failure or system downtime):
+##SBATCH --no-requeue
+#! Output filename:
+#! %A means slurm job ID and %a means array index
+#SBATCH --output=name_%A_%a.out
+#! Errors filename:
+#SBATCH --error=name_%A_%a.err
+#! Do not change:
+#SBATCH -p cclake
+
+# Request 32GB of total memory for the job
+#SBATCH --mem=64000mb               #3.2GB=3240mb, 32GB = 32000mb, 64GB = 64000mb, 128GB = 128000mb, 256GB = 256000mb, 512GB = 512000mb, 1024GB = 1024000mb
+
+
+. /etc/profile.d/modules.sh                # Leave this line (enables the module command)
+module purge                               # Removes all modules still loaded
+module load rhel8/default-amp              # REQUIRED - loads the basic environment
+
+source /home/${USER}/.bashrc
+source /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/activate gnsde
+
+python3 run_gnode.py --dataset Pubmed --epoch 100 --OOD --task_index $SLURM_ARRAY_TASK_ID  

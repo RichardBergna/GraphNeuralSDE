@@ -1,0 +1,18 @@
+Downloading https://raw.githubusercontent.com/graphdml-uiuc-jlu/geom-gcn/master/new_data/cornell/out1_node_feature_label.txt
+Downloading https://raw.githubusercontent.com/graphdml-uiuc-jlu/geom-gcn/master/new_data/cornell/out1_graph_edges.txt
+Processing...
+Done!
+Traceback (most recent call last):
+  File "/home/rsb63/rds/gnsde/grand-sde/src/run_standard_gnsde.py", line 622, in <module>
+    all_accuracies = main(opt)
+  File "/home/rsb63/rds/gnsde/grand-sde/src/run_standard_gnsde.py", line 342, in main
+    dataset = get_dataset(opt, f'{ROOT_DIR}/data', opt['not_lcc'])
+  File "/home/rsb63/rds/gnsde/grand-sde/src/data.py", line 44, in get_dataset
+    dataset = WebKB(root=path, name=ds, transform=T.NormalizeFeatures())
+  File "/home/rsb63/rds/gnsde/grand-sde/src/heterophilic.py", line 218, in __init__
+    self.data, self.slices = torch.load(self.processed_paths[0])
+  File "/home/rsb63/.conda/envs/gnsde/lib/python3.10/site-packages/torch/serialization.py", line 815, in load
+    return _legacy_load(opened_file, map_location, pickle_module, **pickle_load_args)
+  File "/home/rsb63/.conda/envs/gnsde/lib/python3.10/site-packages/torch/serialization.py", line 1033, in _legacy_load
+    magic_number = pickle_module.load(f, **pickle_load_args)
+EOFError: Ran out of input
